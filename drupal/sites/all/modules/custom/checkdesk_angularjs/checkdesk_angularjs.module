@@ -40,9 +40,33 @@ function checkdesk_angularjs_block_view($delta = '') {
       $items[] = '<a href="/#/home">Home</a>';
       $items[] = '<a href="/#/list_users">Users</a>';
       $items[] = '<a href="/#/list_nodes">Nodes</a>';
+      $items[] = '<a href="/#/list_reports">Reports</a>';
 
       $block['content'] = theme('item_list', array('items' => $items));
       break;
   }
   return $block;
+}
+
+/**
+ * Implements hook_services_resources().
+ */
+function checkdesk_angularjs_services_resources() {
+    $resources = array();
+    $resources['media'] = array(
+        'operations' => array(
+            'index' => array(
+                'help' => 'List all reports',
+                'file' => array(
+                    'type' => 'inc',
+                    'module' => 'checkdesk_angularjs',
+                    'name' => 'resources/media'
+                ),
+                'callback' => '_media_resource_index',
+                'access arguments' => array('access content'),
+            ),
+        ),
+    );
+    return $resources;
+
 }

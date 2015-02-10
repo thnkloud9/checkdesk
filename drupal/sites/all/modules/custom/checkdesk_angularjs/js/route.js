@@ -20,6 +20,12 @@ define(['angular', 'app'], function(angular, app) {
             templateUrl: '/sites/all/modules/custom/checkdesk_angularjs/templates/ListNodes.html',
             controller: 'listNodesController'
         });
+        /** List Nodes **/
+        $stateProvider.state('list_reports', {
+            url: '/list_reports',
+            templateUrl: '/sites/all/modules/custom/checkdesk_angularjs/templates/ListReports.html',
+            controller: 'listReportsController'
+        });
         /**** Invalid routes redirection ****/
         $urlRouterProvider.otherwise('/home');
     }]);

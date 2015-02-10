@@ -31,6 +31,9 @@ define([],function(){
         },
         nodes:function(){
             return this.baseUrl+'api/node.json';
+        },
+        reports:function(){
+            return this.baseUrl+'api/media.json';
         }
 
     }

@@ -47,8 +47,27 @@ define(['angular',Drupal.settings.custom_modules + '/checkdesk_angularjs/js/help
             }
         }])
 
+        /***** Node Service *****/
+        .service('Media_Service', ['$http', function ($http) {
+            /**
+             * get token
+             *
+             * @returns {HttpPromise}
+             */
+            this.token = function () {
+                return $http.get(links.token());
+            };
+
+            /**
+             * get current user
+             *
+             * @returns {HttpPromise}
+             */
+            this.reports = function () {
+                return $http.get(links.reports());
+            }
+        }])
+
 });
-
-
 
 

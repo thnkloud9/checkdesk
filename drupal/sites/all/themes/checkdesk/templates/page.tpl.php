@@ -101,7 +101,11 @@
         <?php endif; ?>
 
         <div id="content-area">
-          <?php print render($page['content']); ?>
+    <div ng-controller="mainController">
+      <div  ui-view></div>
+    </div>
+
+          <?php //print render($page['content']); ?>
         </div>
 
         <?php // print $feed_icons; ?>

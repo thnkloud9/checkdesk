@@ -1,0 +1,32 @@
+<div class="region region-content">
+<div class="block block-system" id="block-system-main">
+
+
+<div class="content">
+<h2 class="user-member-for">Reports</h2>
+<div class="profile">
+
+<div id="reports"  class="masonry">
+    <div class="view-content">
+        <div style="float: right;" class="report-item views-row views-row-1 masonry-brick" ng-repeat="report in data">
+
+            <div class="report-item views-row masonry-brick" >
+                <div id="report-48" class="report-row-container">
+                    <div class="report-content">
+                        <div ng-bind-html="renderHtml(report.thumbnail)"></div>
+                        <div class="media-title">
+                            {{report.title}}
+                        </div>
+                    </div>
+                    <div class="report-detail-link">
+                        <a href="/report/{{report.nid}}">Details</a>	</div>
+                </div>
+            </div>
+
+    </div>
+</div>
+
+</div>
+</div>
+</div>
+</div>
