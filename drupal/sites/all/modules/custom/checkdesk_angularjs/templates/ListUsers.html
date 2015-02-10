@@ -1,0 +1,19 @@
+<h1> List Drupal Users </h1>
+<table style="border:solid green">
+    <thead>
+    <tr style="border:solid green">
+        <th>UID</th>
+        <th>Name</th>
+        <th>Email</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr ng-repeat="user in data" style="border:solid green">
+        <td >{{user.uid}}</td>
+        <td>{{user.name}}</td>
+        <td>{{user.mail}}</td>
+
+    </tr>
+    </tbody>
+</table>
+
