@@ -38,42 +38,6 @@ function checkdesk_api_feature_default_services_endpoint() {
     ),
   );
   $endpoint->resources = array(
-    'i18n' => array(
-      'operations' => array(
-        'create' => array(
-          'enabled' => '1',
-        ),
-        'update' => array(
-          'enabled' => '1',
-        ),
-        'delete' => array(
-          'enabled' => '1',
-        ),
-        'index' => array(
-          'enabled' => '1',
-        ),
-      ),
-    ),
-    'flag' => array(
-      'actions' => array(
-        'is_flagged' => array(
-          'enabled' => '1',
-        ),
-        'flag' => array(
-          'enabled' => '1',
-        ),
-        'countall' => array(
-          'enabled' => '1',
-        ),
-      ),
-    ),
-    'discussion' => array(
-      'operations' => array(
-        'index' => array(
-          'enabled' => '1',
-        ),
-      ),
-    ),
     'comment' => array(
       'operations' => array(
         'create' => array(
@@ -97,6 +61,29 @@ function checkdesk_api_feature_default_services_endpoint() {
           'enabled' => '1',
         ),
         'countNew' => array(
+          'enabled' => '1',
+        ),
+      ),
+    ),
+    'i18n' => array(
+      'operations' => array(
+        'index' => array(
+          'enabled' => '1',
+        ),
+        'create' => array(
+          'enabled' => '1',
+        ),
+        'update' => array(
+          'enabled' => '1',
+        ),
+        'delete' => array(
+          'enabled' => '1',
+        ),
+      ),
+    ),
+    'media' => array(
+      'operations' => array(
+        'index' => array(
           'enabled' => '1',
         ),
       ),
@@ -155,19 +142,9 @@ function checkdesk_api_feature_default_services_endpoint() {
       'actions' => array(
         'login' => array(
           'enabled' => '1',
-          'settings' => array(
-            'services' => array(
-              'resource_api_version' => '1.0',
-            ),
-          ),
         ),
         'logout' => array(
           'enabled' => '1',
-          'settings' => array(
-            'services' => array(
-              'resource_api_version' => '1.0',
-            ),
-          ),
         ),
         'register' => array(
           'enabled' => '1',
