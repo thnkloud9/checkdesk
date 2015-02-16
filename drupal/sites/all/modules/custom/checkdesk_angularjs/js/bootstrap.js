@@ -1,10 +1,10 @@
 require.config({
     baseUrl: '/sites/all/',
     paths: {
-        angular : 'libraries/angular/angular.min',
+        angular : 'libraries/bower_components/angular/angular.min',
         app : 'modules/custom/checkdesk_angularjs/js/app',
-        angularBootstrap : 'libraries/angular/ui-bootstrap-tpls-0.12.0.min',
-        angularUi: 'libraries/angular/angular-ui-router',
+        angularBootstrap : 'libraries/bower_components/angular-bootstrap/ui-bootstrap-tpls.min',
+        angularUi: 'libraries/bower_components/angular-ui-router/release/angular-ui-router.min',
         mainController: 'modules/custom/checkdesk_angularjs/controllers/mainController',
         homeController: 'modules/custom/checkdesk_angularjs/controllers/homeController',
         listUsersController: 'modules/custom/checkdesk_angularjs/controllers/listUsersController',

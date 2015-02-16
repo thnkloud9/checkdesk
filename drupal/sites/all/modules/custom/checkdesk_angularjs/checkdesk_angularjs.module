@@ -12,7 +12,7 @@ function checkdesk_angularjs_page_alter(&$page) {
   ), 'setting');
   $page['page_top']['requirejs'] = array(
     '#markup' => '
-    <script type="text/javascript" src="/sites/all/libraries/angular/require.js" data-main="/sites/all/modules/custom/checkdesk_angularjs/js/bootstrap.js"></script>
+    <script type="text/javascript" src="sites/all/libraries/bower_components/requirejs/require.js" data-main="/sites/all/modules/custom/checkdesk_angularjs/js/bootstrap.js"></script>
     ',
       );   
 }
