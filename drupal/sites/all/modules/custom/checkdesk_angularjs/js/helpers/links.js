@@ -23,17 +23,20 @@ define([],function(){
          * Endpoints that provide system wide functionality like authentication
          * @returns {string}
          */
-        token: function(){
+        token: function() {
             return this.baseUrl+'services/session/token';
         },
-        users:function(){
+
+        users:function() {
             return this.baseUrl+'api/user.json';
         },
-        nodes:function(){
+
+        nodes:function() {
             return this.baseUrl+'api/node.json';
         },
-        reports:function(){
-            return this.baseUrl+'api/media.json';
+
+        reports:function(page, pagesize) {
+            return this.baseUrl+'api/media.json?page='+ page +'&pagesize='+ pagesize;
         }
 
     }

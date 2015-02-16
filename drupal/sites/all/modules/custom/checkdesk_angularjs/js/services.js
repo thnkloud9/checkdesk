@@ -63,8 +63,8 @@ define(['angular',Drupal.settings.custom_modules + '/checkdesk_angularjs/js/help
              *
              * @returns {HttpPromise}
              */
-            this.reports = function () {
-                return $http.get(links.reports());
+            this.reports = function (page, pagesize) {
+                return $http.get(links.reports(page, pagesize));
             }
         }])
 

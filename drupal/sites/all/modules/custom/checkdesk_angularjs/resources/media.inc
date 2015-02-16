@@ -3,13 +3,14 @@
 /**
  * List all reports.
  */
-function _media_resource_index() {
+function _media_resource_index($page, $page_size) {
     $output = array();
-    $result = db_query('
-       SELECT nid, title
-       FROM node
-       WHERE type = :type
-    ', array(':type' => 'media'));
+    $sql = '
+            SELECT nid, title
+            FROM node
+            WHERE type = :type
+            ';
+    $result = db_query_range($sql,$page * $page_size, $page_size,  array(':type' => 'media'));
     foreach ($result as $row) {
         $node = node_load($row->nid);
         $render = field_view_field('node', $node, 'field_link',

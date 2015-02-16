@@ -63,6 +63,24 @@ function checkdesk_angularjs_services_resources() {
                     'name' => 'resources/media'
                 ),
                 'callback' => '_media_resource_index',
+                'args' => array(
+                    array(
+                        'name' => 'page',
+                        'optional' => TRUE,
+                        'type' => 'int',
+                        'description' => 'The zero-based index of the page to get, defaults to 0.',
+                        'default value' => 0,
+                        'source' => array('param' => 'page'),
+                    ),
+                    array(
+                        'name' => 'pagesize',
+                        'optional' => TRUE,
+                        'type' => 'int',
+                        'description' => 'Number of records to get per page.',
+                        'default value' => variable_get('services_media_index_page_size', 10),
+                        'source' => array('param' => 'pagesize'),
+                    ),
+                ),
                 'access arguments' => array('access content'),
             ),
         ),
