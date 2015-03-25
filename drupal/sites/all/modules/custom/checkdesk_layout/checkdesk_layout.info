@@ -1,0 +1,7 @@
+name = Checkdesk Layout
+description = Layout Engine that drives custom layout 
+core = 7.x
+package = Checkdesk
+dependencies[] = checkdesk_core
+dependencies[] = ctools
+dependencies[] = panels
