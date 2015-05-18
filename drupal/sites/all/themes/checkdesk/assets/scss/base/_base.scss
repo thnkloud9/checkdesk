@@ -37,7 +37,7 @@ $container-style: magic;
 // Columns count and breakpoints
 $container-width: 18; // Mobile first
 $total-columns: $container-width; // Alias for Susy
-$break-small: 12; 
+$break-small: 0; 
 $break-medium: 24;
 $break-large: 48;
 
