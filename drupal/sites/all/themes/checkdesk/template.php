@@ -89,7 +89,7 @@ function checkdesk_preprocess_field(&$variables, $hook) {
     }
     // Inline thumbnail
     if ($element['#formatter'] == 'meedan_inline_thumbnail') {
-      $variables['inline_thumbnail'] = isset($embed->thumbnail_url) ? l(theme_image(array('path' => $embed->thumbnail_url, 'attributes' => array('class' => array('inline-video-thumb')))), 'node/' . $element['#object']->nid, array('html' => TRUE)) : '';
+      $variables['inline_thumbnail'] = _meedan_inline_thumbnail_bg($node, array('inline-img-thumb'));
     }
     // Large image in case of Flickr or imgur or instagram
     if ($element['#formatter'] == 'meedan_inline_full_mode' || $element['#formatter'] == 'meedan_full_mode') {
@@ -642,13 +642,9 @@ function checkdesk_preprocess_node(&$variables) {
       $variables['inline_thumbnail'] = '';
 
       if (isset($variables['field_lead_image'][0]['uri'])) {
-        $variables['inline_thumbnail'] = l(theme('image_style', array(
-          'path' => $variables['field_lead_image'][0]['uri'],
-          'alt' => t(check_plain($node->title)),
-          'style_name' => 'report_thumbnail',
-          'attributes' => array('class' => 'inline-img-thumb')
-        )), 'node/' . $variables['nid'], array('html' => TRUE));
+        $variables['inline_thumbnail'] = _meedan_inline_thumbnail_bg($node, array('inline-img-thumb'));
       }
+
       // use media creation info for activity templates & search template
       global $language;
       // Set custom format based on language.
@@ -734,8 +730,8 @@ function checkdesk_preprocess_node(&$variables) {
           SELECT DISTINCT nid_target, n.title
           FROM {heartbeat_activity} ha
           INNER JOIN {node} n ON ha.nid_target = n.nid AND ha.nid = :nid
-          WHERE n.language = :language AND message_id IN (:status)
-          ', array(':nid' => $variables['nid'], ':language' => $language->language, ':status' => array('checkdesk_report_suggested_to_story', 'publish_report'))
+          WHERE message_id IN (:status)
+          ', array(':nid' => $variables['nid'], ':status' => array('checkdesk_report_suggested_to_story', 'publish_report'))
               )->fetchAllKeyed(0);
       // display published in story if more than one or its the report/media page
       if (count($published_stories) > 1 || $variables['page'] == TRUE) {
@@ -1024,13 +1020,13 @@ function checkdesk_field__field_tags(&$variables) {
     $type = $variables['element']['#bundle'];
     if ($type == 'media') {
       $alt_type = array(
-          'singular' => 'report',
-          'plural' => 'reports'
+          'singular' => t('Report'),
+          'plural' => t('Reports'),
       );
     } elseif ($type == 'discussion') {
       $alt_type = array(
-          'singular' => 'story',
-          'plural' => 'stories'
+          'singular' => t('Story'),
+          'plural' => t('Stories'),
       );
     }
 
