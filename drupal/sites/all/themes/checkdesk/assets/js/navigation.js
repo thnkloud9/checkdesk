@@ -54,6 +54,18 @@
       });
     }
   };
+  
+  
+  /**
+   * Toggle main menu on mobile hambuger icon click
+   */
+  Drupal.behaviors.toggleMobileMenu = {
+    attach: function (context) {
+      $('a#menu-toggle', context).click(function () {
+        $('#main-menu').toggle();
+      });
+    }
+  }
 
 
   /**

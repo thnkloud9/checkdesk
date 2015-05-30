@@ -6,6 +6,7 @@
     <div class="navbar-inner">
       <div class="container">
           <nav role="navigation">
+            <a id="menu-toggle" href="#">&#xf0c9;</a>
             <?php if ($primary_nav): ?>
               <?php print $primary_nav; ?>
             <?php endif; ?>

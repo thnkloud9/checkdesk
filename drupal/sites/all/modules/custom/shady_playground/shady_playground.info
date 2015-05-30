@@ -1,0 +1,4 @@
+name = Shady Playground
+description = Shady tests and code
+core = 7.x
+package = Development

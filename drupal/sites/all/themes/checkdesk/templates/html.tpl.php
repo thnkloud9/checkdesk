@@ -9,7 +9,7 @@
         <!--[if gt IE 8]><!--> <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" /> <!--<![endif]-->
         <title><?php print $head_title; ?></title>
         <meta name="description" content="" />
-        <meta name="viewport" content="width=device-width" />
+        <meta name="viewport" content="initial-scale=1, maximum-scale=1, width=device-width, user-scalable=no" />
         <?php print $head; ?>
         <?php print $scripts; ?>
         <?php print $styles; ?>

@@ -102,7 +102,7 @@ $icon-position: 'before';
   // Base style for active chunky element
   &.active,
   &.active:hover,
-  &:active {
+    &:active {
     // margin-bottom: -7px;
     background-color: $nav-active-bkg-color;
     @include border-radius($radius);
@@ -113,7 +113,7 @@ $icon-position: 'before';
     // An anchor inside the chunky block
     & > a,
     & > a:hover,
-    & > a:active {
+      & > a:active {
       color: $nav-active-color;
       cursor: default;
       padding-bottom: 5px;
@@ -126,10 +126,10 @@ $icon-position: 'before';
   }
 
   span.avatar img { // images in nav items
-    @include reset-box-model;
-    width: $base-font-size;
-    height: $base-font-size;
-    // border: 1px solid red;
+                    @include reset-box-model;
+                    width: $base-font-size;
+                    height: $base-font-size;
+                    // border: 1px solid red;
   }
 
   @content;
@@ -175,7 +175,42 @@ nav[role="navigation"] {
     }
     & > a.btn, // the user menu button
     & > li { // default: the rest of the li's in the navigation
-      @include nav-item;
+             @include nav-item;
+    }
+  }
+
+  // mobile hambuger menu
+  a#menu-toggle {
+    display: block;
+    @include at-breakpoint($break-medium) {
+      display: none;
+    }
+    float: left;
+    padding: 4px 11px;
+    font-family: FontAwesome;
+    color: white;
+  }
+
+  // mobile main-menu
+  #main-menu.nav
+  {
+    display: none;
+    @include at-breakpoint($break-medium) {
+      display: block;
+    }
+    & > li {
+      display: block;
+      float: none;
+      @include at-breakpoint($break-medium) {
+        display: inline-block;
+        float: $from-direction;  
+      }
+      &.dropdown {
+        display: none;
+        @include at-breakpoint($break-medium) {
+          display: inline-block;  
+        }
+      }
     }
   }
 
@@ -206,7 +241,7 @@ nav[role="navigation"] {
         text-shadow: none;
       }
     }
-    
+
     // hide ajax throbber in dropdown
     .ajax-progress-throbber {
       display: none;
