@@ -31,6 +31,7 @@ drupal/FirePHPCore
 # Stuff added by composer (e.g, Behat)
 bin
 vendor
+npm-debug.log
 
 # configuration files are created from templates
 config/create_database_and_user.sql
