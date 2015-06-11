@@ -130,7 +130,7 @@ function checkdesk_preprocess_html(&$variables) {
 
   // Add classes about widgets sidebar
   if (checkdesk_widgets_visibility()) {
-    if (!empty($variables['page']['widgets'])) {
+    if (FALSE &&!empty($variables['page']['widgets'])) {
       $variables['classes_array'][] = 'widgets';
       // remove no-sidebars class from drupal
       $variables['classes_array'] = array_diff($variables['classes_array'], array('no-sidebars'));

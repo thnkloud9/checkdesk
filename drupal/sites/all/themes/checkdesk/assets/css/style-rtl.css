@@ -4498,7 +4498,7 @@ div.tabs ul.primary li a {
   padding-bottom: 15px;
 }
 
-@media (min-width: 0px) {
+@media (min-width: 705px) {
   div.tabs ul.primary {
     display: block;
     margin: 0 auto;
@@ -5089,7 +5089,7 @@ body.widgets #main #footer #footer-inner, body.sidebar-first #main #footer #foot
   margin: 0;
 }
 
-@media (min-width: 0px) {
+@media (min-width: 705px) {
   body.widgets #main #footer {
     margin-right: 0;
   }
@@ -8214,10 +8214,10 @@ form .form-type-textarea:after {
   clear: both;
 }
 
-@media (min-width: 0px) {
+@media (min-width: 705px) {
   form {
-    padding-right: NaN%;
-    padding-left: NaN%;
+    padding-right: 0%;
+    padding-left: 0%;
   }
   form .description {
     display: inline-block;
@@ -8225,12 +8225,12 @@ form .form-type-textarea:after {
   form > .form-item {
     width: 100%;
     float: right;
-    margin-left: -10%;
+    margin-left: 3.22581%;
   }
   form > .form-item .form-item {
     width: 100%;
     float: right;
-    margin-left: -10%;
+    margin-left: 3.22581%;
   }
   form input[type="password"],
   form input[type="text"],
@@ -8238,7 +8238,7 @@ form .form-type-textarea:after {
     font-family: "Droid Arabic Naskh", serif;
     width: 100%;
     float: right;
-    margin-left: -10%;
+    margin-left: 3.22581%;
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
     box-sizing: border-box;
@@ -8344,7 +8344,7 @@ form .form-type-textarea:after {
   form select {
     width: 100%;
     float: right;
-    margin-left: -10%;
+    margin-left: 3.22581%;
     float: none;
     font-family: "Droid Arabic Naskh", serif;
   }
@@ -10516,7 +10516,7 @@ body.toolbar #main #sidebar-first.column {
   top: 103px;
 }
 
-@media (min-width: 0px) {
+@media (min-width: 705px) {
   body.sidebar-first #main #content {
     margin-right: 30%;
   }
@@ -10585,7 +10585,7 @@ body.widgets #main #content #content-inner:after {
   clear: both;
 }
 
-@media (min-width: 0px) {
+@media (min-width: 705px) {
   body.widgets #main #widgets.column {
     position: relative;
     width: 100%;
@@ -10609,14 +10609,14 @@ body.widgets #main #content #content-inner:after {
     clear: both;
   }
   body.widgets #main #widgets.column #widgets-inner #partner-header {
-    width: NaN%;
+    width: 54.60993%;
     float: right;
-    margin-left: Infinity%;
+    margin-left: 2.12766%;
   }
   body.widgets #main #widgets.column #widgets-inner .widgets-wrapper {
-    width: NaN%;
+    width: 71.63121%;
     float: right;
-    margin-left: Infinity%;
+    margin-left: 2.12766%;
   }
   body.widgets #main #widgets.column #widgets-inner .widgets-wrapper #featured-stories h2 {
     border-top: 0 none;
@@ -11501,7 +11501,7 @@ body.page-user-password #content-header {
   padding-right: 17.77778%;
   padding-left: 17.77778%;
 }
-@media (min-width: 0px) {
+@media (min-width: 705px) {
   body.page-user-login form .social-signin-wrapper a,
   body.page-user-register form .social-signin-wrapper a,
   body.page-user-password form .social-signin-wrapper a {
@@ -11879,25 +11879,25 @@ body.page-reports #main {
   padding-left: 5.67376%;
 }
 
-@media (min-width: 0px) {
+@media (min-width: 705px) {
   body.page-reports #main {
-    padding-right: Infinity%;
-    padding-left: Infinity%;
-    width: -Infinity%;
+    padding-right: 1.06383%;
+    padding-left: 1.06383%;
+    width: 86.52482%;
     float: right;
-    margin-left: Infinity%;
-    padding-right: Infinity%;
-    padding-left: Infinity%;
+    margin-left: 2.12766%;
+    padding-right: 5.67376%;
+    padding-left: 5.67376%;
   }
 
   body.page-reports #main {
-    padding-right: Infinity%;
-    padding-left: Infinity%;
-    width: -Infinity%;
+    padding-right: 1.06383%;
+    padding-left: 1.06383%;
+    width: 86.52482%;
     float: right;
-    margin-left: Infinity%;
-    padding-right: Infinity%;
-    padding-left: Infinity%;
+    margin-left: 2.12766%;
+    padding-right: 5.67376%;
+    padding-left: 5.67376%;
   }
 }
 @media (min-width: 785px) {

@@ -38,7 +38,7 @@
       </div>
     <?php endif; ?>
     
-    <?php if ($page['widgets'] && checkdesk_widgets_visibility()): ?>
+    <?php if (FALSE && $page['widgets'] && checkdesk_widgets_visibility()): ?>
       <aside id="widgets" class="column widgets">
         <div id="widgets-inner" class="inner">
           <?php print render($page['widgets']); ?>
